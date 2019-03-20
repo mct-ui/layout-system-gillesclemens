@@ -167,9 +167,42 @@ a:focus {
     Object description
 */
 
+.o-row {
+    padding: 24px 24px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.o-row--primary {
+    background-color: #e85e00;
+    color: white;
+}
+
+.o-row--dark {
+    background-color: #111;
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .o-row--lg {
+        padding: 48px 48px 24px;
+    }
+}
+
 /*------------------------------------*\
   #COMPONENTS
 \*------------------------------------*/
+/*
+    Objects: Container
+    ---
+    Creates a horizontal container that sets de global max-width
+*/
+
+.o-container {
+    width: 100%;
+    max-width: 90em;
+    margin: 0 auto;
+}
 
 /*
     Component: Component name
@@ -189,6 +222,18 @@ a:focus {
 
 .u-max-width-sm {
     max-width: 36em;
+}
+
+.u-max-width-md {
+    max-width: 45em;
+}
+
+.u-max-width-lg {
+    max-width: 60em;
+}
+
+.u-max-width-xl {
+    max-width: 75em;
 }
 
 /*
@@ -247,16 +292,20 @@ a:focus {
         box-shadow: none !important;
         text-shadow: none !important;
     }
+
     a,
     a:visited {
         text-decoration: underline;
     }
+
     a[href]:after {
         content: " (" attr(href) ")";
     }
+
     abbr[title]:after {
         content: " (" attr(title) ")";
     }
+
     /*
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
@@ -265,14 +314,17 @@ a:focus {
     a[href^="javascript:"]:after {
         content: "";
     }
+
     pre {
         white-space: pre-wrap !important;
     }
+
     pre,
     blockquote {
         border: 1px solid #999;
         page-break-inside: avoid;
     }
+
     /*
      * Printing Tables:
      * http://css-discuss.incutio.com/wiki/Printing_Tables
@@ -280,16 +332,19 @@ a:focus {
     thead {
         display: table-header-group;
     }
+
     tr,
     img {
         page-break-inside: avoid;
     }
+
     p,
     h2,
     h3 {
         orphans: 3;
         widows: 3;
     }
+
     h2,
     h3 {
         page-break-after: avoid;
